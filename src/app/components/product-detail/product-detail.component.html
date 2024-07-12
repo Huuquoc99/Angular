@@ -1,0 +1,177 @@
+<div class="h-[60px] w-full px-14 flex justify-between text-[16px] bg-[#FDFDFD] leading-[55px]">
+    <div class="flex">
+        <div class=" font-medium px-4">
+            <div class="flex">
+                <a href="#">
+                    <h2 class="font-medium mr-3">Home ></h2>
+                </a>
+                <a href="#">
+                    <h2 class="font-medium mr-3">All Category ></h2>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto flex flex-wrap w-full">
+    <div class="w-full md:w-1/2 lg:w-3/5 px-4 mb-8">
+        <div class="relative group rounded-[25px] overflow-hidden">
+            <img [src]="product.image" alt="Product Image"
+                class="w-[70%] mx-auto  object-cover border-[1px] border-[#B5B5B5] rounded-[25px] transition-transform duration-500 hover:scale-105">
+        </div>
+        <div class="flex justify-center gap-10  items-center mt-10">
+            <div class="relative group rounded-[25px] overflow-hidden">
+                <img [src]="product.image" alt="Product Image"
+                    class="w-[300px]  border-[1px] border-[#B5B5B5] rounded-[25px]  object-cover transition-transform duration-500 hover:scale-105">
+            </div>
+            <div class="relative group rounded-[25px] overflow-hidden">
+                <img [src]="product.image" alt="Product Image"
+                    class="w-[300px]  border-[1px] border-[#B5B5B5] rounded-[25px]  object-cover transition-transform duration-500 hover:scale-105">
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full md:w-1/2 lg:w-2/5 px-4 mb-8">
+        <h2 class="text-[36px] font-bold text-[#003F62] mb-4">{{product.name}}</h2>
+        <p class="text-[24px] font-medium text-red-700 mb-4">${{product.price}}</p>
+
+        <div class="flex items-center mb-4">
+            <div class="flex">
+                <img *ngFor="let star of [1, 2, 3, 4, 5]" class="w-[20px] h-[20px] object-contain mr-2"
+                    src="../../../../../assets/image/icon_logo/star1.svg" alt="">
+            </div>
+            <p class="text-sm ml-4">No review</p>
+        </div>
+
+        <div class="flex items-center mb-4">
+            <p class="text-sm">Availability:</p>
+            <img src="../../../assets/image/icon_logo/Frame 132.png" alt="" class="ml-4">
+        </div>
+
+        <div class="mt-8">
+            <img src="../../../assets/image/icon_logo/Line 8.png" alt="">
+        </div>
+
+        <p class="text-sm mb-4 mt-8">Hurry up! Only 34 product left in stock!</p>
+
+        <div class="flex items-center mb-4">
+            <p class="text-sm">Color:</p>
+            <button class="ml-4 border border-[#B5B5B5] rounded-[25px] p-2 transition-colors hover:bg-[#F0F0F0]">
+                <img class="w-full h-full object-cover" src="../../../assets/image/icon_logo/Ellipse 16.png" alt="">
+            </button>
+            <button class="ml-4 border border-[#B5B5B5] rounded-[25px] p-2 transition-colors hover:bg-[#F0F0F0]">
+                <img class="w-full h-full object-cover" src="../../../assets/image/icon_logo/Ellipse 17.png" alt="">
+            </button>
+        </div>
+
+        <div class="flex items-center mb-4">
+            <p class="text-sm">Size:</p>
+            <div *ngFor="let icon of icons">
+                <div
+                    class="w-[60px] h-[30px] bg-slate-400 ml-4 flex items-center justify-center cursor-pointer transition-colors hover:bg-[#E0E0E0]">
+                    <button class="w-full h-full text-center">
+                        <p class="text-sm m-0 p-0 text-black">{{icon.stock}}</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center mt-5">
+            <p>Quantity :</p>
+            <button class="ml-4 w-[35px] h-[32px] bg-[#EEEEEE] hover:border-black hover:border border border-[#c9c9c9]">
+                -
+            </button>
+            <button class="w-[63px] h-[32px] bg-[#EEEEEE] hover:border-black hover:border border border-[#c9c9c9]">
+                1
+            </button>
+            <button class="w-[35px] h-[32px] bg-[#EEEEEE] hover:border-black hover:border border border-[#c9c9c9]">
+                +
+            </button>
+        </div>
+
+        <div class="mt-8">
+            <img src="../../../assets/image/icon_logo/Line 8.png" alt="">
+        </div>
+        <div class="flex mt-5">
+            <p class="font-medium mr-5">Sku:</p>
+            <p>01133-9-9</p>
+        </div>
+        <div class="flex mt-5 gap-5">
+            <p class="font-medium mr-5">Category:</p>
+            <p>20% off,</p>
+            <p>49% off</p>
+            <p>Alex remote</p>
+        </div>
+        <div class="flex mt-5 gap-5">
+            <p class="font-medium mr-5">Share:</p>
+            <div *ngFor="let logo of logos">
+                <button>
+                    <img class="w-[20px] h-[20px]" [src]="logo.image" alt="">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mt-10 justify-center items-center flex gap-10">
+    <a href="">
+        <button type="button"
+            class="font-semibold bg-[#003F62] hover:bg-white border hover:border-[#316887] hover:text-[#316887] text-white  rounded-full w-[300px] h-[80px] transition-all duration-300 text-[22px] ">
+            Description
+        </button>
+    </a>
+    <a href="">
+        <button type="button"
+            class="font-semibold bg-[#003F62] hover:bg-white border hover:border-[#316887] hover:text-[#316887] text-white  rounded-full w-[300px] h-[80px] transition-all duration-300 text-[22px] ">
+            Reviews
+        </button>
+    </a>
+</div>
+<div class=" mt-9 w-[92%] mx-auto border-[1px] border-[#B5B5B5] rounded-[25px] h-[230px]">
+    <div class="mt-10 ml-10  flex flex-col items-start">
+        <button>
+            <p class="font-semibold text-[25px] text-[#003F62]">Customer reviews</p>
+        </button>
+        <button class="mt-5">
+            <p>No reviews yet</p>
+        </button>
+        <button class="w-[150px] h-[80px]">
+            <p class="text-white bg-[#003F62] ">Write a review</p>
+        </button>
+    </div>
+</div>
+<div class="mt-10 px-16">
+    <h2 class="font-semibold text-[25px] text-[#003F62]">Related product</h2>
+</div>
+<div class="mt-10 mb-[-330px]  px-16">
+    <div class="w-full ">
+        <div class="grid grid-cols-4 gap-10 mt-10 mb-2 grid-rows-products">
+            <div *ngFor="let product of products"
+                    class="max-w-[400px] border-[1px] border-[#B5B5B5] rounded-[25px] font-medium py-6 px-4 relative group">
+                    <a href="product/{{product.id}}">
+                        <div class="flex justify-center">
+                            <img class="w-[200px] h-[180px] object-cover" [src]="product.image" alt="">
+                        </div>
+                        <div class="h-[100px] group-hover:hidden">
+                            <h3 class="text-[17px] text-[#003F62] font-medium">{{ product.name }}</h3>
+                            <h4 class="my-4 font-bold text-[#4A4A4A]">{{ product.price }}</h4>
+                            <div class="grid grid-cols-5 w-5/12">
+                                <img *ngFor="let star of [1, 2, 3, 4, 5]" class="h-full object-cover"
+                                    src="../../../../../assets/image/icon_logo/star.svg" alt="">
+                            </div>
+                        </div>
+                    </a>
+                        <div class="hidden justify-between h-[60px] mt-8 group-hover:flex">
+                            <div
+                                class="bg-[#87BCD9] h-full cursor-pointer rounded-[20px] flex justify-between items-center min-w-[204.58px] px-7">
+                                <h3>Add to cart</h3>
+                                <img class="w-[30px] h-[30px]"
+                                    src="../../../../../assets/image/icon_logo/cart_product.svg" alt="">
+                            </div>
+                            <div
+                                class="bg-[#87BCD9] h-full w-[70px] cursor-pointer rounded-[20px] flex justify-center items-center">
+                                <img src="../../../../../assets/image/icon_logo/eye.svg" alt="">
+                            </div>
+                        </div>    
+                </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+<div class="h-[60px] w-full px-14 flex justify-between text-[16px] bg-[#FDFDFD] leading-[55px]">
+    <div class="flex">
+        <div class=" font-medium px-4">
+            <div class="flex">
+                <a href="#">
+                    <h2 class="font-medium mr-3">Home ></h2>
+                </a>
+                <a href="#">
+                    <h2 class="font-medium mr-3">All Category ></h2>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="h-[1400px] w-full flex px-16 ">
+    <div class="w-[20%]  ml-10 mr-10 mt-10 category-list">
+        <div class="flex justify-between">
+            <div class="text-[#003F62] font-medium">Categories</div>
+            <div class="text-[#595959] font-regular">Reset</div>
+        </div>
+        <div *ngFor="let menu of menus">
+            <div class="flex justify-between mt-5">
+                <div class="flex">
+                    <div>
+                        <img [src]="menu.image" alt="">
+                    </div>
+                    <div class="ml-3">
+                        <p>{{menu.name}}</p>
+                    </div>
+                </div>
+                <div>
+                    <p>{{menu.stock}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-7">
+            <img src="../../../assets/image/icon_logo/Line 2.png" alt="">
+        </div>
+    </div>
+    <div class="w-[80%] ">
+        <a href="">
+            <div class="grid grid-cols-3 gap-8 mt-10 mb-2 grid-rows-products">
+                <div *ngFor="let product of products"
+                    class="max-w-[400px] border-[1px] border-[#B5B5B5] rounded-[25px] font-medium py-6 px-4 relative group">
+                    <a href="product/{{product.id}}">
+                        <div class="flex justify-center">
+                            <img class="w-[200px] h-[180px] object-cover" [src]="product.image" alt="">
+                        </div>
+                        <div class="h-[100px] group-hover:hidden">
+                            <h3 class="text-[17px] text-[#003F62] font-medium">{{ product.name }}</h3>
+                            <h4 class="my-4 font-bold text-[#4A4A4A]">{{ product.price }}</h4>
+                            <div class="grid grid-cols-5 w-5/12">
+                                <img *ngFor="let star of [1, 2, 3, 4, 5]" class="h-full object-cover"
+                                    src="../../../../../assets/image/icon_logo/star.svg" alt="">
+                            </div>
+                        </div>
+                    </a>
+                        <div class="hidden justify-between h-[60px] mt-8 group-hover:flex">
+                            <div
+                                class="bg-[#87BCD9] h-full cursor-pointer rounded-[20px] flex justify-between items-center min-w-[204.58px] px-7">
+                                <h3>Add to cart</h3>
+                                <img class="w-[30px] h-[30px]"
+                                    src="../../../../../assets/image/icon_logo/cart_product.svg" alt="">
+                            </div>
+                            <div
+                                class="bg-[#87BCD9] h-full w-[70px] cursor-pointer rounded-[20px] flex justify-center items-center">
+                                <img src="../../../../../assets/image/icon_logo/eye.svg" alt="">
+                            </div>
+                        </div>    
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

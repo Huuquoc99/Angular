@@ -1,0 +1,15 @@
+.product-container {
+    position: relative;
+}
+
+.product-container:hover .product-details {
+    display: none;
+}
+
+.product-container:hover .product-buttons {
+    display: flex;
+}
+
+.product-buttons {
+    display: none;
+}

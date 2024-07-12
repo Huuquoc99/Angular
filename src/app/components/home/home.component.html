@@ -1,0 +1,118 @@
+<div class="h-[380px] px-36 py-6">
+  <div *ngFor="let banner of banners; let i = index" class="flex justify-between"
+    [style.display]="slideIndex === i + 1 ? 'flex' : 'none'">
+    <div>
+      <div class="font-bold text-[#1B5A7D]">
+        <h2 class="text-[40px]">{{ banner.title1 }}</h2>
+        <h2 class="text-[40px]">{{ banner.title2 }}</h2>
+      </div>
+      <div class="max-w-fit mt-12">
+        <div class="flex font-semibold">
+          <button class="border-1 w-[140px] bg-[#EDA415] rounded-[20px] py-4 text-white mr-6">Show now</button>
+          <button class="border-1 w-[140px] rounded-[20px] py-4 border-2 border-[#1B5A7D] text-[#1B5A7D]">View
+            more</button>
+        </div>
+        <div class="flex justify-center mt-16">
+          <div *ngFor="let dot of banners; let j = index" class="w-[14px] h-[14px] rounded-full mx-2"
+            [ngStyle]="{'background-color': slideIndex === j + 1 ? '#EDA415' : 'transparent', 'border': slideIndex === j + 1 ? '1px solid transparent' : '2px solid #ADADAD'}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <img class="h-[350px] object-cover" [src]="banner.image" alt="Product Banner">
+      <div [ngStyle]="{'background-color': banner.status === 'New' ? '#FF0000' : '#EDA415'}"
+        class="h-[120px] w-[120px] rounded-full text-white font-semibold leading-[120px] text-center absolute right-0 bottom-0">
+        <span class="text-[21px]">{{banner.status}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid grid-cols-3 gap-12 py-12 px-44 text-[#1B5A7D]">
+  <div class="border-[1px] flex border-[#A5A5A5] rounded-[20px] items-center h-[147px] pl-6 pr-1">
+    <img class="w-[110px] h-[120px] object-cover" src="../../../../../assets/image/product/product_category1.svg"
+      alt="">
+    <div class="flex flex-col justify-center ml-7">
+      <span class="font-semibold text-[23.38px] mb-1">Speaker</span>
+      <span class="font-medium">( 6 items )</span>
+    </div>
+  </div>
+  <div class="border-[1px] flex border-[#A5A5A5] rounded-[20px] items-center h-[147px] pl-6 pr-1">
+    <img class="w-[110px] h-[120px] object-cover" src="../../../../../assets/image/product/product_category2.svg"
+      alt="">
+    <div class="flex flex-col justify-center ml-7">
+      <span class="font-semibold text-[23.38px] mb-1 ">Desktop & laptop</span>
+      <span class="font-medium">( 6 items )</span>
+    </div>
+  </div>
+  <div class="border-[1px] flex border-[#A5A5A5] rounded-[20px] items-center h-[147px] pl-6 pr-1">
+    <img class="w-[110px] h-[120px] object-cover" src="../../../../../assets/image/product/product_category3.svg"
+      alt="">
+    <div class="flex flex-col justify-center ml-7">
+      <span class="font-semibold text-[23.38px] mb-1">DSLR camera</span>
+      <span class="font-medium">( 6 items )</span>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="px-14 py-5">
+  <div class="text-[#1B5A7D] flex justify-between">
+    <h2 class="text-[27.38px] font-semibold">Popular products</h2>
+    <div class="grid grid-cols-4 gap-4">
+      <div
+        class="border-[1px] border-[#B5B5B5] rounded-[20px] w-[140px] h-[45px] flex justify-center items-center font-medium cursor-pointer hover:text-[#EDA415]">
+        <span>Cameras</span>
+      </div>
+      <div
+        class="border-[1px] border-[#B5B5B5] rounded-[20px] w-[140px] h-[45px] flex justify-center items-center font-medium cursor-pointer hover:text-[#EDA415]">
+        <span>Laptops</span>
+      </div>
+      <div
+        class="border-[1px] border-[#B5B5B5] rounded-[20px] w-[140px] h-[45px] flex justify-center items-center font-medium cursor-pointer hover:text-[#EDA415]">
+        <span>Tablets</span>
+      </div>
+      <div
+        class="border-[1px] border-[#B5B5B5] rounded-[20px] w-[140px] h-[45px] flex justify-center items-center font-medium cursor-pointer hover:text-[#EDA415]">
+        <span>Mouse</span>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <div class="grid grid-cols-4 gap-6 mt-14 grid-rows-products">
+    <div *ngFor="let product of products"
+      class="max-w-[350px] border-[1px] border-[#B5B5B5] rounded-[20px] font-medium py-6 px-4 relative group">
+      <a href="product/{{product.id}}">
+        <div class="flex justify-center">
+          <img class="w-[200px] h-[180px] object-cover" [src]="product.image" alt="">
+          <img class="absolute right-5 cursor-pointer" src="../../../../../assets/image/icon_logo/love_product.svg"
+            alt="">
+        </div>
+        <div class="h-[60px] group-hover:hidden">
+          <h3 class="text-[17px] text-[#003F62] font-medium">{{ product.name }}</h3>
+          <h4 class="my-4 font-bold text-[#4A4A4A]">{{ product.price }}</h4>
+          <div class="grid grid-cols-5 w-5/12">
+            <img *ngFor="let star of [1, 2, 3, 4, 5]" class="w-[14.75px] h-[14.75px]"
+              src="../../../../../assets/image/icon_logo/star.svg" alt="">
+          </div>
+        </div>
+      </a>
+      <div class="hidden justify-between h-[60px] mt-8 group-hover:flex">
+        <div
+          class="bg-[#87BCD9] h-full cursor-pointer rounded-[20px] flex justify-between items-center min-w-[204.58px] px-7">
+          <h3>Add to cart</h3>
+          <img class="w-[30px] h-[30px]" src="../../../../../assets/image/icon_logo/cart_product.svg" alt="">
+        </div>
+        <div class="bg-[#87BCD9] h-full w-[70px] cursor-pointer rounded-[20px] flex justify-center items-center">
+          <img src="../../../../../assets/image/icon_logo/eye.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>

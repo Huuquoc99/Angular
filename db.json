@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "name": "Fitness tracker",
+      "price": "49.99",
+      "image": "../../../../../assets/image/product_item/product1.svg",
+      "category": "Luxury",
+      "id": "5"
+    },
+    {
+      "name": "Wireless speaker",
+      "price": "79.99",
+      "image": "../../../../../assets/image/product_item/product2.svg",
+      "category": "Luxury",
+      "id": "6"
+    },
+    {
+      "name": "Gaming console",
+      "price": "399.99",
+      "image": "../../../../../assets/image/product_item/product3.svg",
+      "category": "Luxury",
+      "id": "7"
+    },
+    {
+      "name": "Smartwatch",
+      "price": "199.99",
+      "image": "../../../../../assets/image/product_item/product4.svg",
+      "category": "Luxury",
+      "id": "81d3"
+    },
+    {
+      "name": "Gaming console",
+      "price": "399.99",
+      "image": "../../../../../assets/image/product_item/product3.svg",
+      "category": "Luxury",
+      "id": "12b5"
+    },
+    {
+      "name": "Nhẫn kim cương",
+      "category": "Luxury1",
+      "price": "123.43",
+      "image": "https://kimtaingocdiamond.com/wp-content/uploads/2022/05/nhan-kim-cuong-nam.jpg",
+      "id": "jSYLNg5"
+    }
+  ],
+  "categorys": [
+    {
+      "id": 1,
+      "name": "Luxury",
+      "path": "luxury"
+    },
+    {
+      "id": 2,
+      "name": "Luxury1",
+      "path": "luxury1"
+    },
+    {
+      "name": "Mec se dec 222sfsdfsd",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "email": "duonghuuquoc99@gmail.com",
+      "password": "$2a$10$gme926wdFVlcXxi5J.IF0uwHElAwwaBEiQKHarPwTL5Y8L/zouIGa",
+      "name": "Dương Hữu Quốc",
+      "id": 1
+    }
+  ]
+}

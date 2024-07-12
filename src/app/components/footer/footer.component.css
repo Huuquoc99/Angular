@@ -1,0 +1,10 @@
+.custom-bullet {
+  @apply relative pl-5;
+}
+
+.custom-bullet::before {
+  content: '•';
+  font-size: xx-large;
+  color: #D9D9D9;
+  @apply absolute left-[-0.1rem] top-[-13px];
+}
